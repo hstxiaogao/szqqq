@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>在线聊天室 · 三中投稿墙</title>
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<div class="bg-orb orb1"></div><div class="bg-orb orb2"></div><div class="bg-orb orb3"></div>
+<div class="stars" id="stars"></div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">
+      <div class="brand-logo"><img src="/assets/school-logo.jpg"></div>
+      <div><strong>三中投稿墙</strong><span>HENGSHUI NO.3 MIDDLE SCHOOL</span></div>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" href="/">投稿墙</a>
+      <a class="nav-link" href="/submit.html">发布投稿</a>
+      <a class="nav-link active" href="/chat.html">在线聊天室</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="page-shell">
+  <div class="eyebrow"><i></i> LIVE CHAT</div>
+  <h1 class="page-title">在线聊天室</h1>
+  <p class="page-desc">有人发出第一条消息后开始计时 20 分钟。倒计时结束后，聊天室消息会从数据库自动清理。</p>
+
+  <div class="chat-card">
+    <div class="chat-head">
+      <div>
+        <b>三中临时聊天室</b>
+        <div class="chat-status" id="status">等待第一条消息…</div>
+      </div>
+      <span id="timer">20:00</span>
+    </div>
+
+    <div class="chat-window" id="chatWindow"></div>
+
+    <div class="chat-input">
+      <input id="msg" maxlength="1000" placeholder="输入消息，按 Enter 发送">
+      <input id="chatImage" type="file" accept=".jpg,.jpeg,.png,.gif,.webp,image/jpeg,image/png,image/gif,image/webp" hidden>
+      <button type="button" class="ghost" id="imgBtn">图片</button>
+      <button type="button" class="primary" id="send">发送</button>
+    </div>
+    <div class="file-hint" style="padding:0 15px 15px">图片仅支持 JPG / JPEG / PNG / GIF / WEBP，最大 50MB；5 分钟内只能成功上传 1 张。</div>
+  </div>
+</section>
+</main>
+
+<div class="toast" id="toast"></div>
+<script src="/assets/chat.js"></script>
+</body>
+</html>

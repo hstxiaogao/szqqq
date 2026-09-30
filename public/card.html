@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>卡密验证 · 三中投稿墙</title>
+<link rel="icon" href="/assets/school-logo.jpg">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body class="card-gate-page">
+  <div class="bg-orb orb1"></div><div class="bg-orb orb2"></div><div class="bg-orb orb3"></div>
+  <div class="stars" id="stars"></div><div class="scanline"></div>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="/card.html">
+        <div class="brand-logo"><img src="/assets/school-logo.jpg" alt="三中校徽"></div>
+        <div><strong>三中投稿墙</strong><span>HENGSHUI NO.3 · COMMUNITY</span></div>
+      </a>
+      <div class="card-gate-live"><i></i> ACCESS SYSTEM</div>
+    </div>
+  </header>
+
+  <main class="card-gate-main">
+    <section class="card-gate-shell">
+      <div class="card-gate-decoration decoration-a"></div>
+      <div class="card-gate-decoration decoration-b"></div>
+
+      <div class="card-gate-brand">
+        <div class="card-logo-ring"><img src="/assets/school-logo.jpg" alt="衡水市第三中学校徽"></div>
+        <div class="card-status"><i></i><span>ACCESS CONTROL · ONLINE</span></div>
+      </div>
+
+      <div class="card-gate-copy">
+        <div class="eyebrow"><i></i> MEMBER ACCESS <i></i></div>
+        <h1>进入<span>三中投稿墙</span></h1>
+        <p>输入有效卡密后即可进入投稿墙、聊天室及社区功能。</p>
+      </div>
+
+      <div class="card-input-panel">
+        <div class="card-input-head">
+          <div><b>输入访问卡密</b><small>ACCESS KEY</small></div>
+          <span class="secure-pill">SECURE</span>
+        </div>
+        <div class="card-input-wrap">
+          <span class="key-icon">✦</span>
+          <input id="code" placeholder="请输入您的卡密" autocomplete="off" spellcheck="false" maxlength="128">
+          <button id="clearCode" type="button" aria-label="清空">×</button>
+        </div>
+        <div class="card-hint"><span>●</span> 一个浏览器设备只能绑定一张有效卡密</div>
+        <button class="card-enter-btn" id="bind" type="button"><span>验证并进入投稿墙</span><b>→</b></button>
+      </div>
+
+      <div class="card-info-grid">
+        <div><span class="info-icon">01</span><div><b>一机一码</b><small>卡密绑定当前浏览器设备</small></div></div>
+        <div><span class="info-icon">02</span><div><b>实时有效期</b><small>绑定后可查看剩余时间</small></div></div>
+        <div><span class="info-icon">03</span><div><b>安全访问</b><small>无效卡密无法进入社区</small></div></div>
+      </div>
+
+      <div class="bound-card" id="bound" hidden></div>
+    </section>
+  </main>
+
+  <footer><span>© 三中投稿墙 · Community Access</span><span>系统状态 <b class="footer-online">● ONLINE</b></span></footer>
+  <div class="toast" id="toast"></div>
+  <script src="/assets/gate.js"></script>
+  <script>
+    const input=document.getElementById('code');
+    const clear=document.getElementById('clearCode');
+    clear.addEventListener('click',()=>{input.value='';input.focus()});
+    input.addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('bind').click()});
+  </script>
+</body>
+</html>

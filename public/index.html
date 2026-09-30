@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>三中投稿墙 · 衡水市第三中学</title>
+<link rel="icon" href="/assets/school-logo.jpg">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<div class="bg-orb orb1"></div><div class="bg-orb orb2"></div><div class="bg-orb orb3"></div>
+<div class="stars" id="stars"></div>
+<div class="scanline"></div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">
+      <div class="brand-logo"><img src="/assets/school-logo.jpg" alt="衡水市第三中学校徽"></div>
+      <div>
+        <strong>三中投稿墙</strong>
+        <span>HENGSHUI NO.3 MIDDLE SCHOOL</span>
+      </div>
+    </a>
+
+    <div class="nav-links">
+      <a class="nav-link active" href="/">投稿墙</a>
+      <a class="nav-link" href="/submit.html">发布投稿</a>
+      <a class="nav-link" href="/chat.html">在线聊天室</a>
+    </div>
+
+    <a class="nav-notification" href="/notifications.html" aria-label="消息通知" title="消息通知">
+      <span>🔔</span><b id="notificationBadge"></b>
+    </a>
+    <a class="nav-submit" href="/submit.html">＋ 发布投稿</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow"><i></i> 校园 · 分享 · 连接</div>
+    <h1>把想说的话<br><em>留在三中</em></h1>
+    <p>衡水市第三中学专属投稿墙。可以匿名，也可以留下昵称。分享校园日常，交流学习想法，让每一份声音都有被看见的机会。</p>
+    <div class="hero-live"><span></span> COMMUNITY ONLINE <b>LIVE</b></div>
+    <div class="hero-actions">
+      <a class="primary" href="/submit.html">立即投稿 <span>→</span></a>
+      <a class="ghost" href="#wall">浏览投稿 <span>↓</span></a>
+    </div>
+  </div>
+  <div class="hero-card">
+    <img src="/assets/school-logo.jpg" alt="衡水市第三中学">
+    <div class="hero-card-title">衡水市第三中学</div>
+    <div class="hero-card-sub">三中投稿墙 · 校园社区</div>
+    <div class="mini-line"><span></span><b>ANONYMOUS / OPEN</b></div>
+  </div>
+</section>
+
+<section class="quick">
+  <div><span class="q-icon">◈</span><div><b>匿名投稿</b><small>不显示你的昵称</small></div></div>
+  <div><span class="q-icon">✦</span><div><b>实时更新</b><small>无需刷新页面</small></div></div>
+  <div><span class="q-icon">♡</span><div><b>友善社区</b><small>理性交流，尊重他人</small></div></div>
+</section>
+
+<section id="wall" class="wall-section">
+  <div class="section-head">
+    <div><div class="eyebrow"><i></i> LIVE WALL</div><h2>最新投稿</h2></div>
+    <div class="filters" id="filters"></div>
+  </div>
+
+  <div class="post-search">
+    <div class="post-search-input">
+      <span>⌕</span>
+      <input id="searchKeyword" type="search" placeholder="搜索帖子内容…" maxlength="200">
+    </div>
+    <select id="searchRange" aria-label="时间范围">
+      <option value="all">全部时间</option>
+      <option value="today">今天</option>
+      <option value="3d">近 3 天</option>
+      <option value="7d">近 7 天</option>
+    </select>
+    <button id="searchBtn" class="primary search-btn">搜索</button>
+  </div>
+
+  <div id="posts" class="posts"></div>
+  <div id="empty" class="empty" hidden>还没有符合条件的投稿。</div>
+  <button id="more" class="load-more">加载更多</button>
+</section>
+</main>
+
+<footer>
+  <span>三中投稿墙</span>
+  <span>衡水市第三中学 · 校园社区</span>
+</footer>
+
+<div class="toast" id="toast"></div>
+<script src="/assets/app.js"></script>
+</body>
+</html>

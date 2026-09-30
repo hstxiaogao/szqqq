@@ -1,0 +1,17 @@
+{
+  "name": "sanzhong-tougaoqiang",
+  "version": "2.0.0",
+  "description": "三中投稿墙 Node.js + MySQL Pro",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "multer": "^2.4.0",
+    "mysql2": "^3.11.5"
+  }
+}
